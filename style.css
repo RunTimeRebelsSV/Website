@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: #fff;
+  line-height: 1.6;
+}
+
+header {
+  background: #1e293b;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #38bdf8;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.active {
+  color: #38bdf8;
+}
+
+.hero {
+  background: url('images/hero.jpg') center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+}
+
+.btn {
+  background: #38bdf8;
+  color: #0f172a;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.btn:hover {
+  background: #7dd3fc;
+}
+
+section {
+  padding: 3rem 2rem;
+}
+
+.announcement {
+  text-align: center;
+  background: #1e293b;
+  border-top: 2px solid #38bdf8;
+  padding: 2rem;
+}
+
+.event-card {
+  background: #1e293b;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin: 1rem 0;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact button {
+  background: #38bdf8;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background: #7dd3fc;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #1e293b;
+  margin-top: 3rem;
+}
+/* ====== RESPONSIVE DESIGN ====== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 10px 0;
+    border-top: 1px solid #334155;
+  }
+
+  .hero {
+    height: 70vh;
+    padding: 1rem;
+    text-align: center;
+    background-position: center;
+  }
+
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .event-card {
+    padding: 1rem;
+  }
+
+  .contact form {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+/* ====== LAYOUT FIX TO KEEP FOOTER AT BOTTOM ====== */
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body > * {
+  flex-shrink: 0;
+}
+
+main {
+  flex: 1;
+}
+footer {
+  flex-shrink: 0;
+}
+/* ====== HAMBURGER MENU ====== */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #38bdf8;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #1e293b;
+    margin-top: 10px;
+    border-top: 1px solid #334155;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 12px;
+    border-top: 1px solid #334155;
+  }
+}
