@@ -1,5 +1,5 @@
 // Typing effect
-const text = "S-VYASA Coding Club";
+const text = "Run Time rebels";
 let index = 0;
 function typeEffect() {
   document.getElementById("typing-text").textContent = text.slice(0, index++);
@@ -20,4 +20,5 @@ document.querySelectorAll("#nav-links a").forEach(link => {
   link.addEventListener("click", () => {
     navLinks.classList.remove("show");
   });
+
 });
